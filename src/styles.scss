@@ -1,0 +1,17 @@
+@import './styles/tailwind.css';
+
+body {
+    background: #f1f6ff;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 38px;
+}
+
+.container {
+    max-width: 950px;//тут уже все зависит от самого дизайна какой контейнер ширины
+    margin: 0 auto;
+}

@@ -1,0 +1,44 @@
+<app-header></app-header>
+<main>
+    <div class="container">
+        <div class="auth-tab">
+            <ul class="tabs">
+                <li [class.active]="isLogin" (click)="toggleTab(true)">Вход</li>
+                <li [class.active]="!isLogin" (click)="toggleTab(false)">Регистрация</li>
+            </ul>
+
+            <div *ngIf="isLogin" class="form-container">
+                <h2>Вход</h2>
+                <form (ngSubmit)="login()">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" [(ngModel)]="loginEmail" name="loginEmail" required />
+                    <div *ngIf="messageAboutEmail">{{ messageAboutEmail }}</div>
+                    <label for="login-password">Пароль:</label>
+                    <input type="password" id="login-password" [(ngModel)]="loginPassword" name="loginPassword"
+                        required />
+
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+
+            <div *ngIf="!isLogin" class="form-container">
+                <h2>Регистрация</h2>
+                <form (ngSubmit)="register()">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" [(ngModel)]="registerEmail" name="registerEmail" required />
+                    <p *ngIf="messageAboutEmail">{{ messageAboutEmail }}</p>
+                    <label for="register-password">Пароль:</label>
+                    <input type="password" id="register-password" [(ngModel)]="registerPassword" name="registerPassword"
+                        required />
+
+                    <label for="register-confirm-password">Подтверждение пароля:</label>
+                    <input type="password" id="register-confirm-password" [(ngModel)]="registerConfirmPassword"
+                        name="registerConfirmPassword" required />
+                        
+                        <p *ngIf="messageAboutPasswords">{{ messageAboutPasswords }}</p>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

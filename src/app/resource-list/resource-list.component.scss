@@ -1,0 +1,24 @@
+.resource{
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    &-content {
+        padding-top: 60px;
+        width: 100%;
+        background: #5f51fa;
+        height: 100vh;
+        .title {
+            color:#fff;
+        }
+    }
+    
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 40px;
+        display: flex;
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}

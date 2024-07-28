@@ -1,0 +1,45 @@
+<app-header></app-header>
+<main>
+  <div class="container">
+    <div class="user-card">
+      <div *ngIf="!isEditing">
+        <div class="user-wrap">
+          <div class="user-info">
+            <div class="user__name">Name: <span>{{ name }}</span></div>
+            <div class="user__surname">Surname: <span>{{ surname }}</span></div>
+            <div class="user__email">Email: <span>{{ email }}</span></div>
+          </div>
+          <div class="user__img">
+            <img src="{{ src }}" alt="avatar">
+          </div>
+        </div>
+          <button class="btn-update" (click)="toggleEdit()">Update</button>
+      </div>
+
+      <div *ngIf="isEditing">
+        <form (ngSubmit)="updateUser()" class="user-form">
+          <label>
+            Name:
+            <input [(ngModel)]="name" name="name" required />
+          </label>
+          <label>
+            Surname:
+            <input [(ngModel)]="surname" name="surname" required />
+          </label>
+          <label>
+            Email:
+            <input [(ngModel)]="email" name="email" type="email" required />
+          </label>
+          <label>
+            Image URL:
+            <input [(ngModel)]="src" name="imgUrl" required />
+          </label>
+          <div class="btn-wrapper">
+            <button type="submit" class="btn-update">Save</button>
+            <button type="button" (click)="toggleEdit()" class="btn-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

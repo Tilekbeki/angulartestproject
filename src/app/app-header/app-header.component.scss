@@ -1,0 +1,18 @@
+.header {
+    width: 100%;
+    background: black;
+    padding: 20px;
+    color:#fff;
+    margin-bottom: 40px;
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.btn-auth {
+    background: #5f51fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}

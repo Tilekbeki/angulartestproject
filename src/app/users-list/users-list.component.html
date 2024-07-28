@@ -1,0 +1,17 @@
+<div class="users-content">
+    <div class="container">
+        <h1 class="title">Список пользователей</h1>
+    <div class="users-list">
+        
+        <div class="user" *ngFor="let user of users">
+            <div class="user__name">{{ user.first_name }}</div>
+            <div class="user__email">{{ user.email }}</div>
+            <div class="user__img"><img src="{{ user.avatar }}" alt="person img"></div>
+            <div class="user__controls">
+                <a [routerLink]="['/user', user.id]" class="user__link">перейти</a>
+                <button class="user__btn-delete" (click)="deleteUser(user.id)">удалить</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+.auth-tab {
+    .tabs {
+      list-style-type: none;
+      display: flex;
+      cursor: pointer;
+  
+      li {
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        background-color: #f0f0f0;
+  
+        &.active {
+          background-color: white;
+          font-weight: bold;
+          border-top: 2px solid #007bff;
+        }
+      }
+    }
+  
+    .form-container {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  
+      h2 {
+        margin-bottom: 20px;
+      }
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+  
+      input {
+        width: calc(100% - 10px);
+        padding: 5px;
+        margin-bottom: 15px;
+      }
+  
+      button {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }

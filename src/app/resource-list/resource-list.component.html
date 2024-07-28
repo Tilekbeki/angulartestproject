@@ -1,0 +1,15 @@
+<div class="resource-content">
+    <h1 class="title">Список ресурсов</h1>
+    <div class="container">
+        <ol class="resource-list list-decimal list-inside pl-5">
+            <li class="resource text-gray-500 list-decimal" *ngFor="let resource of resources" >
+                <div>{{ resource.id }}.</div>
+                <div>name: {{ resource.name }}</div>
+                <div>year: {{ resource.year }}</div>
+                <div>color: {{ resource.color }}</div>
+                <div>pantone_value {{ resource.pantone_value }}</div>
+            </li>
+            
+        </ol>
+    </div>
+</div>

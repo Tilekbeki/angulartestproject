@@ -1,0 +1,9 @@
+<header class="header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div>Привет {{ currentUser }}!</div>
+            <a *ngIf="!isAuthenticated" class="btn-auth" routerLink="/auth">войти</a>
+            <a *ngIf="isAuthenticated" class="btn-auth" (click)="logout()">выйти</a>
+        </div>
+    </div>
+</header>
